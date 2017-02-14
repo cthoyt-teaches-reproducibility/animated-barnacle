@@ -4,12 +4,7 @@ cache: pip
 language: python
 
 python:
-    - "2.7"
     - "3.6"
-
-env:
-    - TOXENV=py26
-    - TOXENV=py36
 
 install:
     - pip install tox
