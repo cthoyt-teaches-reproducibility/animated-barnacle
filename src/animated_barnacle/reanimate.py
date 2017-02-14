@@ -25,6 +25,9 @@ class Reanimator:
 
         return "The lifeless body of {}".format(self.corps)
 
+    def __repr__(self):
+        return str(self)
+
 
 def build_bodies(list_of_str):
     """Makes a corpse object for each name in the list
