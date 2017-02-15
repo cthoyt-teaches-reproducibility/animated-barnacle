@@ -33,8 +33,8 @@ def build_bodies(list_of_str):
     """Makes a corpse object for each name in the list
 
     :param list_of_str: list of strings of names for corpses
-    :type list_of_str: list of str
-    :return:
+    :type list_of_str: iter of str
+    :return: A list of corpses
     :rtype: list of Reanimator
     """
     return [Reanimator(s) for s in list_of_str]
