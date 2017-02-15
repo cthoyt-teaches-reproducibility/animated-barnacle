@@ -1,4 +1,29 @@
 import setuptools
+import os
+import codecs
+
+KEYWORDS = ['Testing', 'Devops']
+CLASSIFIERS = [
+    'Development Status :: 1 - Planning',
+    'Environment :: Console',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Science/Research',
+    'License :: OSI Approved :: Apache Software License',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 2.7',
+    'Programming Language :: Python :: 3.6',
+    'Topic :: Scientific/Engineering :: Bio-Informatics'
+]
+
+HERE = os.path.abspath(os.path.dirname(__file__))
+
+
+def get_long_description():
+    """Get the long_description from the README.rst file. Assume UTF-8 encoding."""
+    with codecs.open(os.path.join(HERE, 'README.rst'), encoding='utf-8') as f:
+        long_description = f.read()
+    return long_description
 
 if __name__ == '__main__':
     setuptools.setup(
@@ -26,4 +51,8 @@ if __name__ == '__main__':
                 'animated_barnacle = animated_barnacle.cli:main',
             ]
         },
+
+        long_description=get_long_description(),
+        classifiers=CLASSIFIERS,
+        keywords=KEYWORDS,
     )
