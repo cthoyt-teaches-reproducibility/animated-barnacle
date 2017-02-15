@@ -14,5 +14,16 @@ if __name__ == '__main__':
         packages=setuptools.find_packages(where='src'),
 
         # Assign the package-level folder ('') to be the one it finds in 'src'
-        package_dir={'': 'src'}
+        package_dir={'': 'src'},
+
+        install_requires=[
+            'click',
+        ],
+
+        # Add command line function to automatically run the main function from animated_barnacle.cli
+        entry_points={
+            'console_scripts': [
+                'animated_barnacle = animated_barnacle.cli:main',
+            ]
+        },
     )
