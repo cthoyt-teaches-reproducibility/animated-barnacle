@@ -4,6 +4,7 @@ cache: pip  # means that packages can be cached from pip
 language: python
 
 python:
+    - "2.7"
     - "3.6"
 
 install:
